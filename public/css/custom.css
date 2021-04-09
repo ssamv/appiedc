@@ -1,0 +1,129 @@
+
+.container {
+  width: auto;
+  padding: 0 15px;
+}
+
+.animateHidden {
+  visibility: hidden;
+}
+
+#stand1:before {
+    content:'';
+    position: absolute;
+          top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.6);
+}
+
+#stand-link:hover {
+  color: #95bdac !important;
+  border-color:#95bdac !important;
+}
+
+#stand1 {
+	background-image: url("../img/stand-10.jpg");
+	padding: 400px 100px;
+	text-align: center;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+#stand2 {
+	background-image: url("../img/stand_premium.jpg");
+	padding: 400px 100px;
+	text-align: center;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+a#nav{
+  color: #00375F !important;
+}
+
+a#nav:hover{
+  font-weight: bold !important;
+  color: #FF8000 !important;
+}
+
+a#btn-nav{
+  background-color: #00375F;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 10px;
+  text-decoration: none;
+}
+
+a#btn-nav:hover{
+  background-color: #FF8000;
+}
+
+
+@media only screen and (max-width: 766px) {
+
+  body{
+    padding-top: 1.5rem !important;
+  }
+
+  #nav-collapse-menu-items {
+    text-align : center !important;
+  }
+
+  nav .navbar-nav{
+    width:100%;
+  }
+
+  #div-select-categorias{
+    top:67px !important;
+  }
+
+  .btn-control-stand{
+    bottom: 15% !important;
+  }
+
+  #btn-fullscreen{
+    right: 28% !important;
+  }
+
+  #btn-exit-fullscreen{
+    right: 28% !important;
+  }
+
+  #btn-collection{
+    left: 28% !important;
+  }
+
+  @media all and (orientation:landscape) {
+    .btn-control-stand{
+      bottom: 1% !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  nav .navbar-nav{
+    display: inline-flex;
+  }
+
+  nav img{
+    width:150px;
+  }
+}
+
+@media all and (display-mode: fullscreen) {
+  #btn-fullscreen{
+    display: none !important;
+  }
+
+  #btn-exit-fullscreen{
+    display: block !important;
+  }
+}

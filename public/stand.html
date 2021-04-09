@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <!-- Basic Conf/Desc -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">	
+    <title>E-Swaper Virtual Events</title>	
+    <meta name="keywords" content="E-Swaper"/>
+    <meta name="description" content="E-Swaper Virtual Events Web Site">
+    <meta name="author" content="Sebastian Muñoz">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="#" />
+    <link rel="apple-touch-icon" href="#">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    <!-- CSS-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="lib/animate_css/animate.min.css">
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+    
+    <!-- CSS Icons-->
+    <link rel="stylesheet" href="lib/bootstrap/css_icons/bootstrap-icons.css">
+
+    <!-- JS -->
+    <script src="lib/jquery/jquery-3.6.0.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    
+  </head>
+
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-md navbar-light bg-light p-0">
+      <div class="container-fluid text-center d-block">
+          <a class="navbar-brand p-0" href="/lobby" style="float:right; margin-left:16px; margin-right:0px;"><img src="img/logo_vebo.png" width="100px"/></a>
+          <a class="navbar-brand p-0" href="/lobby" style="float:left;"><img src="img/LOGO-EXPOMATRIMONIOSCL.png" width="100px"/></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" style="margin-top: 15px;">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse pt-2 pb-2" id="navbarCollapse" style="margin-top: 25px;">
+            <div id="#nav-collapse-menu-items " class="text-center" style="display: inline-block; width:100%;">
+              <ul class="navbar-nav mb-2 mb-md-0">
+                <li class="nav-item">
+                <a class="nav-link text-dark" href="lobby">Lobby</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="expositores">Expositores</a>
+                </li>
+              </ul>
+                <button class="btn btn-outline-dark" type="submit">Mi perfil</button>
+            </div>
+          </div>
+          
+      </div>
+    </nav>
+        
+    <main>
+      <table style="width:100%; min-height: 500px;"><tbody><tr class="align-middle"><td>
+        <div style="position:relative;" id="div-stands">
+         
+          <!-- modal stands categoria -->
+          <div class="modal fade" id="modal-stands" data-bs-keyboard="false" tabindex="10" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Stands de: <strong>Vestidos</strong></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row row-cols-1 g-3">
+                    <div class="col O-Stand">
+                      <a href="stand.html">
+                      <div class="card shadow-sm" style="width:100%; height:225px; overflow: hidden; display: flex; align-items: center; justify-content: center; border-radius: .9rem !important;">
+                        <img src="img/stand-10-min.png" width="550px" height="auto">
+                        <div class="align-middle" style="display: inline-block; position:absolute; text-align:center; top:0%; left:0%; width:50px; height:50px; background-color:rgb(149, 189, 172, 1); color:white; font-weight:bold; font-size:17px; border-bottom-right-radius: .9rem !important;">
+                          <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                          <td class="text-center">
+                            <span class="align-middle">
+                              <img src="img/dress-black.png" width="70%" height="auto">
+                            </span>
+                          </td>
+                          </tr></tbody></table>
+                        </div>
+                        <div class="align-middle pt-5 text-dark" style="display: inline-block; position:absolute; text-align:center; bottom:0%; left:0%; width:100%; height:50%; background-image: linear-gradient(rgba(0, 0, 0, 0),rgb(149, 189, 172, 1)); font-weight:bold; font-size:27px;">
+                          <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                          <td class="text-center">
+                            <span class="align-middle">
+                              Icy Shot
+                            </span>
+                          </td>
+                          </tr></tbody></table>
+                        </div>
+                      </div>
+                      </a>
+                    </div>
+                    <div class="col O-Stand">
+                      <a href="stand.html">
+                      <div class="card shadow-sm" style="width:100%; height:225px; overflow: hidden; display: flex; align-items: center; justify-content: center; border-radius: .9rem !important;">
+                        <img src="img/stand_premium.jpg" width="550px" height="auto">
+                        <div class="align-middle" style="display: inline-block; position:absolute; text-align:center; top:0%; left:0%; width:50px; height:50px; background-color:rgb(149, 189, 172, 1); color:white; font-weight:bold; font-size:17px; border-bottom-right-radius: .9rem !important;">
+                          <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                          <td class="text-center">
+                            <span class="align-middle">
+                              <img src="img/dress-black.png" width="70%" height="auto">
+                            </span>
+                          </td>
+                          </tr></tbody></table>
+                        </div>
+                        <div class="align-middle pt-5 text-dark" style="display: inline-block; position:absolute; text-align:center; bottom:0%; left:0%; width:100%; height:50%; background-image: linear-gradient(rgba(0, 0, 0, 0),rgb(149, 189, 172, 1)); font-weight:bold; font-size:27px;">
+                          <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                          <td class="text-center">
+                            <span class="align-middle">
+                              Salones y Eventos
+                            </span>
+                          </td>
+                          </tr></tbody></table>
+                        </div>
+                      </div>
+                      </a>
+                    </div>
+                    <div class="col O-Stand">
+                      <a href="stand.html">
+                      <div class="card shadow-sm" style="width:100%; height:225px; overflow: hidden; display: flex; align-items: center; justify-content: center; border-radius: .9rem !important;">
+                        <img src="img/stand_premium.jpg" width="550px" height="auto">
+                        <div class="align-middle" style="display: inline-block; position:absolute; text-align:center; top:0%; left:0%; width:50px; height:50px; background-color:rgb(149, 189, 172, 1); color:white; font-weight:bold; font-size:17px; border-bottom-right-radius: .9rem !important;">
+                          <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                          <td class="text-center">
+                            <span class="align-middle">
+                              <img src="img/dress-black.png" width="70%" height="auto">
+                            </span>
+                          </td>
+                          </tr></tbody></table>
+                        </div>
+                        <div class="align-middle pt-5 text-dark" style="display: inline-block; position:absolute; text-align:center; bottom:0%; left:0%; width:100%; height:50%; background-image: linear-gradient(rgba(0, 0, 0, 0),rgb(149, 189, 172, 1)); font-weight:bold; font-size:27px;">
+                          <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                          <td class="text-center">
+                            <span class="align-middle">
+                              Salones y Eventos
+                            </span>
+                          </td>
+                          </tr></tbody></table>
+                        </div>
+                      </div>
+                      </a>
+                    </div>
+                    <div class="col O-Stand">
+                      <a href="stand.html">
+                      <div class="card shadow-sm" style="width:100%; height:225px; overflow: hidden; display: flex; align-items: center; justify-content: center; border-radius: .9rem !important;">
+                        <img src="img/stand_premium.jpg" width="550px" height="auto">
+                        <div class="align-middle" style="display: inline-block; position:absolute; text-align:center; top:0%; left:0%; width:50px; height:50px; background-color:rgb(149, 189, 172, 1); color:white; font-weight:bold; font-size:17px; border-bottom-right-radius: .9rem !important;">
+                          <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                          <td class="text-center">
+                            <span class="align-middle">
+                              <img src="img/dress-black.png" width="70%" height="auto">
+                            </span>
+                          </td>
+                          </tr></tbody></table>
+                        </div>
+                        <div class="align-middle pt-5 text-dark" style="display: inline-block; position:absolute; text-align:center; bottom:0%; left:0%; width:100%; height:50%; background-image: linear-gradient(rgba(0, 0, 0, 0),rgb(149, 189, 172, 1)); font-weight:bold; font-size:27px;">
+                          <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                          <td class="text-center">
+                            <span class="align-middle">
+                              Salones y Eventos
+                            </span>
+                          </td>
+                          </tr></tbody></table>
+                        </div>
+                      </div>
+                      </a>
+                    </div>
+                    <div class="col O-Stand">
+                      <a href="stand.html">
+                      <div class="card shadow-sm" style="width:100%; height:225px; overflow: hidden; display: flex; align-items: center; justify-content: center; border-radius: .9rem !important;">
+                        <img src="img/stand_premium.jpg" width="550px" height="auto">
+                        <div class="align-middle" style="display: inline-block; position:absolute; text-align:center; top:0%; left:0%; width:50px; height:50px; background-color:rgb(149, 189, 172, 1); color:white; font-weight:bold; font-size:17px; border-bottom-right-radius: .9rem !important;">
+                          <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                          <td class="text-center">
+                            <span class="align-middle">
+                              <img src="img/dress-black.png" width="70%" height="auto">
+                            </span>
+                          </td>
+                          </tr></tbody></table>
+                        </div>
+                        <div class="align-middle pt-5 text-dark" style="display: inline-block; position:absolute; text-align:center; bottom:0%; left:0%; width:100%; height:50%; background-image: linear-gradient(rgba(0, 0, 0, 0),rgb(149, 189, 172, 1)); font-weight:bold; font-size:27px;">
+                          <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                          <td class="text-center">
+                            <span class="align-middle">
+                              Salones y Eventos
+                            </span>
+                          </td>
+                          </tr></tbody></table>
+                        </div>
+                      </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--FIN MODAL-->
+
+          <!--MODALs VIDEOS-->
+          <div class="modal fade" id="modal-video-1" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content" style="background-color: unset;">
+                <!--<video
+                  id="my-video"
+                  class="video-js"
+                  controls
+                  preload="auto"
+                  height="400"
+                  data-setup="{}" style="width:100% !important"
+                >
+                  <source src="video/v-1.mp4" type="video/mp4" />
+                  <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a
+                    web browser that
+                    <a href="https://videojs.com/html5-video-support/" target="_blank"
+                      >supports HTML5 video</a
+                    >
+                  </p>
+                </video>-->
+                <iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/TqHOgN8GCXQ" title="YouTube video player"></iframe>
+                
+                  <a href="javascript:void(0)" data-bs-dismiss="modal" style="margin-top: 10px; padding: 15px; width:100%; border-radius: 10px; background-color: white; color:#95bdac; border:solid 3px #95bdac; font-weight: bold; font-size: 20px; text-align: center;">Cerrar</a>
+              </div>
+            </div>
+          </div>
+          
+          <!--FIN MODALs VIDEOS-->
+
+          <!--MODALs PDFs-->
+          <div class="modal fade" id="modal-pdf-1" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content" style="background-color: unset;">
+                <iframe width="100%" height="400" src="catalogos/CATALOGO-EXPO-ICYSHOT.pdf" title="YouTube video player"></iframe>
+                  <a href="javascript:void(0)" data-bs-dismiss="modal" style="margin-top: 10px; padding: 15px; width:100%; border-radius: 10px; background-color: white; color:#95bdac; border:solid 3px #95bdac; font-weight: bold; font-size: 20px; text-align: center;">Cerrar</a>
+              </div>
+            </div>
+          </div>
+          
+          <!--FIN MODALs PDFs-->
+
+          <div class="sticky-top" style="background-color: #95bdac;">
+            <div style="position: relative;">
+                <div id="ts-1" class="text-center animate__animated" style="position: absolute; width: 100%; top:0px;">
+                  <div class="align-middle" style="display: inline-block; position:absolute; text-align:left; top:0; left:0; width:100%; height:0; color:white; font-weight:bold; font-size:17px;">
+                        <img src="img/dress.png" width="6%" height="auto" style="background-color: #95bdac; padding: 1%;"/>
+                        <img src="img/dress.png" width="6%" height="auto" style="background-color: #95bdac; padding: 1%;"/>
+                  </div>
+                </div>
+                <div id="ts-2" class="text-center animate__animated d-none" style="position: absolute; width: 100%; top:0px;">
+                  <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center"><td class="text-center">
+                  <h1 class="titleStand featurette-heading text-light fw-bold">Paris Novios</h1>
+                  </td></tr></tbody></table>
+                </div>
+            </div>
+          </div>
+          <div id="div-img-stand" style="position: relative;">
+            <img src="img/false-stand-desktop.png" width="100%" height="auto">
+            <div id="s-1" class="O-Stand animate__animated" style="width:100%; height:auto; overflow: hidden; display: flex; align-items: center; justify-content: center; border-radius: 0 !important; position: absolute; top:0px; left:0px; background-image: url('img/stand-10.jpg'); background-size: cover;">
+              <img src="img/false-stand-desktop.png" width="100%" height="auto">
+              <!--LINK VIDEO LLAMADA-->
+              <div id="stand-link" class="align-middle" style="border-radius:50%; border:solid 4px #ffffff80; display: inline-block; position:absolute; text-align:center; top:38.8%; left:36.7%; width:5.6%; height:9.4%;">
+                <a href="javascript:void(0)" class="btn-control-stand" id="" style="color: #95bdac; position: relative; z-index: 1000; line-height: 0; padding: 10px 10px;"><img src="img/icon-1.svg" width="80%" height="auto"></a>
+                
+              </div>
+              <!--LINK WHATSAPP-->
+              <div id="stand-link" class="align-middle" style="border-radius:50%; border:solid 4px #ffffff80; display: inline-block; position:absolute; text-align:center; top:38.8%; left:47%; width:5.6%; height:9.4%;">
+                <a href="#">
+                <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                <td class="text-center">
+                </td>
+                </tr></tbody></table>
+                </a>
+              </div>
+              <!--LINK WEBSITE-->
+              <div id="stand-link" class="align-middle" style="border-radius:50%; border:solid 4px #ffffff80; display: inline-block; position:absolute; text-align:center; top:38.8%; left:57.2%; width:5.6%; height:9.4%;">
+                <a href="#">
+                <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                <td class="text-center">
+                </td>
+                </tr></tbody></table>
+                </a>
+              </div>
+              <!--LINK VIDEO-->
+              <div class="align-middle" style="display: inline-block; position:absolute; text-align:center; top:52%; left:40%; width:20.3%; height:20.2%;">
+                <a href="#modal-video-1" data-bs-toggle="modal">
+                <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                <td class="text-center">
+                    <i id="stand-link" class="bi bi-play-circle" style="width:100%; color: rgba(255, 255, 255, 0.555); line-height: 0px !important; font-size: 10vw;"></i>
+                </td>
+                </tr></tbody></table>
+                </a>
+              </div>
+              <!--LINK COTIZA AQUI-->
+              <div id="stand-link" class="align-middle" style="border-radius:10px; border:solid 4px #ffffff80; display: inline-block; position:absolute; text-align:center; top:51.5%; left:25%; width:9.4%; height:28.3%;">
+                <a href="#">
+                <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                <td class="text-center">
+                </td>
+                </tr></tbody></table>
+                </a>
+              </div>
+              <!--LINK DESCARGA CATALOGO-->
+              <div id="stand-link" class="align-middle" style="border-radius:10px; border:solid 4px #ffffff80; display: inline-block; position:absolute; text-align:center; top:50.7%; left:65.75%; width:9.4%; height:28.3%;">
+                <a href="#modal-pdf-1" data-bs-toggle="modal">
+                <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                <td class="text-center">
+                </td>
+                </tr></tbody></table>
+                </a>
+              </div>
+              <!--LINK TELEFONO-->
+              <div id="stand-link" class="align-middle" style="border-radius:10px; border:solid 4px #ffffff00; display: inline-block; position:absolute; text-align:center; top:42.6%; left:15.06%; width:4.8%; height:8.5%;">
+                <a href="#">
+                <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                <td class="text-center">
+                </td>
+                </tr></tbody></table>
+                </a>
+              </div>
+              <!--LINK FACEBOOK-->
+              <div id="stand-link" class="align-middle" style="border-radius:10px;border:solid 4px #ffffff00; display: inline-block; position:absolute; text-align:center; top:52%; left:15.05%; width:4.8%; height:8.3%;">
+                <a href="#">
+                <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                <td class="text-center">
+                </td>
+                </tr></tbody></table>
+                </a>
+              </div>
+              <!--LINK INSTAGRAM-->
+              <div id="stand-link" class="align-middle" style="border-radius:10px; border:solid 4px #ffffff00; display: inline-block; position:absolute; text-align:center; top:61.3%; left:15.05%; width:4.8%; height:8.3%;">
+                <a href="#">
+                <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                <td class="text-center">
+                </td>
+                </tr></tbody></table>
+                </a>
+              </div>
+              <!--LINK E-MAIL -->
+              <div id="stand-link" class="align-middle" style="border-radius:10px; border:solid 4px #ffffff00; display: inline-block; position:absolute; text-align:center; top:70.4%; left:15.05%; width:4.8%; height:8.5%;">
+                <a href="#">
+                <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                <td class="text-center">
+                </td>
+                </tr></tbody></table>
+                </a>
+              </div>
+            </div>
+
+            <div id="s-2" class="O-Stand animate__animated d-none" style="width:100%; height:auto; overflow: hidden; display: flex; align-items: center; justify-content: center; border-radius: 0 !important; position: absolute; top:0px; left:0px; background-image: url('img/stand_final_desktop.png'); background-size: cover;">
+              <img src="img/false-stand-desktop.png" width="100%" height="auto">
+              <!--LINK VIDEO LLAMADA-->
+              <div id="stand-link" class="align-middle" style="border-radius:50%; border:solid 4px #ffffff80; display: inline-block; position:absolute; text-align:center; top:38.8%; left:36.7%; width:5.6%; height:9.4%;">
+                <a href="#">
+                <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                <td class="text-center">
+                </td>
+                </tr></tbody></table>
+                </a>
+              </div>
+              <!--LINK WHATSAPP-->
+              <div id="stand-link" class="align-middle" style="border-radius:50%; border:solid 4px #ffffff80; display: inline-block; position:absolute; text-align:center; top:38.8%; left:47%; width:5.6%; height:9.4%;">
+                <a href="#">
+                <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                <td class="text-center">
+                </td>
+                </tr></tbody></table>
+                </a>
+              </div>
+              <!--LINK WEBSITE-->
+              <div id="stand-link" class="align-middle" style="border-radius:50%; border:solid 4px #ffffff80; display: inline-block; position:absolute; text-align:center; top:38.8%; left:57.2%; width:5.6%; height:9.4%;">
+                <a href="#">
+                <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                <td class="text-center">
+                </td>
+                </tr></tbody></table>
+                </a>
+              </div>
+              <!--LINK VIDEO-->
+              <div class="align-middle" style="display: inline-block; position:absolute; text-align:center; top:52%; left:40%; width:20.3%; height:20.2%;">
+                <a href="#modal-video-1" data-bs-toggle="modal">
+                <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                <td class="text-center">
+                    <i id="stand-link" class="bi bi-play-circle" style="width:100%; color: rgba(255, 255, 255, 0.555); line-height: 0px !important; font-size: 10vw;"></i>
+                </td>
+                </tr></tbody></table>
+                </a>
+              </div>
+              <!--LINK COTIZA AQUI-->
+              <div id="stand-link" class="align-middle" style="border-radius:10px; border:solid 4px #ffffff80; display: inline-block; position:absolute; text-align:center; top:51.5%; left:25%; width:9.4%; height:28.3%;">
+                <a href="#">
+                <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                <td class="text-center">
+                </td>
+                </tr></tbody></table>
+                </a>
+              </div>
+              <!--LINK DESCARGA CATALOGO-->
+              <div id="stand-link" class="align-middle" style="border-radius:10px; border:solid 4px #ffffff80; display: inline-block; position:absolute; text-align:center; top:50.7%; left:65.75%; width:9.4%; height:28.3%;">
+                <a href="#">
+                <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                <td class="text-center">
+                </td>
+                </tr></tbody></table>
+                </a>
+              </div>
+              <!--LINK TELEFONO-->
+              <div id="stand-link" class="align-middle" style="border-radius:10px; border:solid 4px #ffffff80; display: inline-block; position:absolute; text-align:center; top:43.1%; left:15%; width:4.7%; height:8%;">
+                <a href="#">
+                <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                <td class="text-center">
+                </td>
+                </tr></tbody></table>
+                </a>
+              </div>
+              <!--LINK FACEBOOK-->
+              <div id="stand-link" class="align-middle" style="border-radius:10px;border:solid 4px #ffffff80; display: inline-block; position:absolute; text-align:center; top:52.3%; left:15%; width:4.7%; height:8%;">
+                <a href="#">
+                <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                <td class="text-center">
+                </td>
+                </tr></tbody></table>
+                </a>
+              </div>
+              <!--LINK INSTAGRAM-->
+              <div id="stand-link" class="align-middle" style="border-radius:10px; border:solid 4px #ffffff80; display: inline-block; position:absolute; text-align:center; top:61.65%; left:15%; width:4.7%; height:8%;">
+                <a href="#">
+                <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                <td class="text-center">
+                </td>
+                </tr></tbody></table>
+                </a>
+              </div>
+              <!--LINK E-MAIL -->
+              <div id="stand-link" class="align-middle" style="border-radius:10px; border:solid 4px #ffffff80; display: inline-block; position:absolute; text-align:center; top:70.9%; left:15%; width:4.7%; height:8%;">
+                <a href="#">
+                <table style="width:100%; height:100%;"><tbody><tr class="align-middle text-center">
+                <td class="text-center">
+                </td>
+                </tr></tbody></table>
+                </a>
+              </div>
+            </div>
+            </div>
+            
+            <a href="javascript:void(0)" class="btn-control-stand" id="btn-left" style="background-color: #95bdac; color: white; position: fixed; bottom: 1%; left: 1%; z-index: 1000; font-size: 54px; line-height: 0; padding: 3px 10px; border-radius: 15px;"><i class="bi bi-caret-left"></i></a>
+            <a href="javascript:void(0)" class="btn-control-stand" id="btn-right" style="background-color: #95bdac; color: white; position: fixed; bottom: 1%; right: 1%; z-index: 1000;font-size: 54px; line-height: 0; padding: 3px 10px; border-radius: 15px;"><i class="bi bi-caret-right"></i></a>
+            <a class="btn-control-stand" id="btn-collection" type="button" data-bs-toggle="modal" href="#modal-stands" style="background-color: #95bdac; color: white; position: fixed; bottom: 1%; left: 30%; z-index: 1000; font-size: 54px; line-height: 0; padding: 3px 10px; border-radius: 15px;"><i class="bi bi-collection"></i></a>
+            <a href="javascript:void(0)" class="btn-control-stand" id="btn-fullscreen" style="background-color: #95bdac; color: white; position: fixed; bottom: 1%; right: 30%; z-index: 1000; font-size: 54px; line-height: 0; padding: 3px 10px; border-radius: 15px;"><i class="bi bi-fullscreen"></i></a>
+            <a href="javascript:void(0)" class="btn-control-stand" id="btn-exit-fullscreen" style="display: none; background-color: #95bdac; color: white; position: fixed; bottom: 1%; right: 30%; z-index: 1000; font-size: 54px; line-height: 0; padding: 3px 10px; border-radius: 15px;"><i class="bi bi-fullscreen"></i></a>
+          </div>
+        </div>
+      </td></tr></tbody></table>
+    </main>
+
+
+
+    <footer style="position:relative; height:70px;" class="footer py-3 bg-light">
+  </footer>
+  
+    <!--VIDEO JS-->
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+
+    <script>
+      var standOut;
+      var titleStandOut;
+      /* Recorres los stands*/
+      function removeAnimates(element){
+        $(element).removeClass("animate__slideInLeft");
+        $(element).removeClass("animate__slideOutLeft");
+        $(element).removeClass("animate__slideInRight");
+        $(element).removeClass("animate__slideOutRight");
+      }
+
+      function displayOut(s_out,ts_out){
+        $(s_out).addClass("d-none");
+        $(ts_out).addClass("d-none");
+      }
+
+      function displayIn(s_in,ts_in){
+        $(s_in).removeClass("d-none");
+        $(ts_in).removeClass("d-none");
+      }
+
+      var div_stands = document.getElementById("div-stands");
+
+      $(function(){
+        $(".O-Stand").on("animationend",function(){
+         
+          setTimeout(displayOut(standOut,titleStandOut),500);
+        });
+
+        $("#btn-fullscreen").click(function(){
+          if (div_stands.requestFullscreen) {
+            div_stands.requestFullscreen();
+          } else if (div_stands.webkitRequestFullscreen) { /* Safari */
+            div_stands.webkitRequestFullscreen();
+          } else if (div_stands.msRequestFullscreen) { /* IE11 */
+            div_stands.msRequestFullscreen();
+          }
+        });
+
+        $("#btn-exit-fullscreen").click(function(){
+          if(document.exitFullscreen || div_stands.exitFullscreen) {
+            document.exitFullscreen();
+            div_stands.exitFullscreen();
+          } else if(document.mozCancelFullScreen || div_stands.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+            div_stands.mozCancelFullScreen();
+          } else if(document.webkitExitFullscreen || div_stands.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+            div_stands.webkitExitFullscreen();
+          }
+        });
+
+        $("#btn-right").click(function(){
+          standOut= $("#s-1");
+          titleStandOut= $("#ts-1");
+          removeAnimates($("#ts-1"));
+          $("#ts-1").addClass("animate__slideOutLeft");
+          removeAnimates($("#s-1"));
+          $("#s-1").addClass("animate__slideOutLeft");
+          removeAnimates($("#ts-2"));
+          $("#ts-2").addClass("animate__slideInRight");
+          removeAnimates($("#s-2"));
+          $("#s-2").addClass("animate__slideInRight");
+          displayIn($("#s-2"),$("#ts-2"));
+        });
+
+        $("#btn-left").click(function(){
+          standOut= $("#s-2");
+          titleStandOut= $("#ts-2");
+          removeAnimates($("#ts-2"));
+          $("#ts-2").addClass("animate__slideOutRight");
+          removeAnimates($("#s-2"));
+          $("#s-2").addClass("animate__slideOutRight");
+          removeAnimates($("#ts-1"));
+          $("#ts-1").addClass("animate__slideInLeft");
+          removeAnimates($("#s-1"));
+          $("#s-1").addClass("animate__slideInLeft");
+          displayIn($("#s-1"),$("#ts-1"));
+        });
+      });
+    </script>
+  </body>
+</html>
