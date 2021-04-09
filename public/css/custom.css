@@ -1,3 +1,8 @@
+/*
+  los colores son: 
+  #232323 ->negro
+  #9c1420 -> rojo
+*/
 
 .container {
   width: auto;
@@ -44,16 +49,16 @@
 }
 
 a#nav{
-  color: #00375F !important;
+  color: white  !important;
 }
 
 a#nav:hover{
   font-weight: bold !important;
-  color: #FF8000 !important;
+  color: #9c1420 !important;
 }
 
 a#btn-nav{
-  background-color: #00375F;
+  background-color: #9c1420;
   color: white;
   border: none;
   border-radius: 5px;
@@ -62,14 +67,14 @@ a#btn-nav{
 }
 
 a#btn-nav:hover{
-  background-color: #FF8000;
+  background-color: white;
+  color: #9c1420;
 }
 
 
 @media only screen and (max-width: 766px) {
-
   body{
-    padding-top: 1.5rem !important;
+    padding-top: 3.7rem !important;
   }
 
   #nav-collapse-menu-items {
@@ -78,10 +83,6 @@ a#btn-nav:hover{
 
   nav .navbar-nav{
     width:100%;
-  }
-
-  #div-select-categorias{
-    top:67px !important;
   }
 
   .btn-control-stand{

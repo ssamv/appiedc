@@ -5,9 +5,9 @@
     <!-- Basic Conf/Desc -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">	
-    <title>TROX 360</title>	
-    <meta name="keywords" content="trox360"/>
-    <meta name="description" content="Evento">
+    <title>Evento IEDC</title>	
+    <meta name="keywords" content="iedc"/>
+    <meta name="description" content="I Colóquio Nacional Do IEDC">
     <meta name="author" content="Sebastian Muñoz">
 
     <!-- Favicon -->
@@ -29,9 +29,8 @@
     <style>
       /*
       los colores son: 
-      00375F ->azul
-      97A1AD -> celeste
-      FF8000 -> naranjo links
+      #232323 ->negro
+      #9c1420 -> rojo
       */
       body{
         background-image: url('img/lobby-vista.png');
@@ -42,7 +41,7 @@
       }
 
       input[type=submit]{
-        background-color: #00375F;
+        background-color: #9c1420;
         color: white;
         border-radius: 5px;
         border: none;
@@ -50,7 +49,17 @@
       }
 
       input[type=submit]:hover{
-        background-color: #FF8000;
+        background-color: white;
+        color: #9c1420;
+      }
+
+      a#link-theme{
+        color: white;
+        text-decoration: none;
+      }
+
+      a#link-theme:hover{
+        color: #9c1420;
       }
 
     </style>
@@ -61,14 +70,14 @@
       <table class="w-100 h-100"><tbody><tr><td class="align-middle">
       <div class="container">
         <div class="row text-center d-block" style="padding:10px;">
-          <div class="col-sm-10 col-ms-9 col-md-8 col-lg-6 col-xl-4 card text-center d-inline-block" style="border-radius:20px;">
+          <div class="col-sm-10 col-ms-9 col-md-8 col-lg-6 col-xl-4 card text-center d-inline-block" style="border-radius:20px; color:white; background-color: #232323;">
             <div class="card-body">
               <div class="w-100 d-inline-block">
-                <a class="navbar-brand p-0" href="https://trox360.com/" target="_blank"><img id="logo" src="img/logo_trox360.png" width="150px"/></a>
+                <a class="navbar-brand p-0" href="https://www.institutoeduardocorreia.com.br/" target="_blank"><img id="logo" src="img/logo_iedc.png" width="150px"/></a>
               </div>
               <hr class="featurette-divider">
-              <h2 class="featurette-heading fw-bold" style="color: #00375F">Evento Trox<span style="color: #FF8000;"> 360</span></h2>
-              <h5 class="featurette-heading fw-bold" style="color: #00375F">15 de Abril</h5>
+              <h2 class="featurette-heading fw-bold" style="color: white">I COLÓQUIO NACIONAL DO <span style="color: #9c1420;"> IEDC</span></h2>
+              <h5 class="featurette-heading fw-bold" style="color: white">16 e 17 de Abril</h5>
                 <p class="mt-4 card-text mb-3">Introduzca su email para ingresar al evento</p>
               <form>
                 <div class="mb-3 text-start">
@@ -77,7 +86,7 @@
                 </div>
                 <div class="mb-3 text-center">
                   <input type="checkbox" id="aceptar_terminos" required>
-                  <a href="/lobby" style="text-decoration: none;">Acepto términos y condiciones del evento Venta Especial Boda Online</a>
+                  <a id="link-theme" href="/auditorio" style="text-decoration: none;">Acepto términos y condiciones del evento Venta Especial Boda Online</a>
                 </div>
                 <input id="ingresar" class="mt-2 mb-2" href="#" type="submit" value="Ingresar"/>
               </form>

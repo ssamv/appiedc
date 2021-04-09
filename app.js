@@ -8,14 +8,8 @@ var path = require('path');
 app.use(express.static('public'));
 
 // routes
-app.get('/lobby', function(req, res) {
-  res.sendFile(path.join(__dirname + '/public/lobby.html'));
-});
-app.get('/expositores', function(req, res) {
-  res.sendFile(path.join(__dirname + '/public/expositores.html'));
-});
-app.get('/stand', function(req, res) {
-    res.sendFile(path.join(__dirname + '/public/stand.html'));
+app.get('/auditorio', function(req, res) {
+  res.sendFile(path.join(__dirname + '/public/auditorio.html'));
 });
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/public/home.html'));
