@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <!-- Basic Conf/Desc -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">	
+    <title>Evento IEDC</title>	
+    <meta name="keywords" content="iedc"/>
+    <meta name="description" content="I Colóquio Nacional Do IEDC">
+    <meta name="author" content="Sebastian Muñoz">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="#" />
+    <link rel="apple-touch-icon" href="#">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    <!-- CSS-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- JS -->
+    <script src="lib/jquery/jquery-3.6.0.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- CSS SPECIFIC-->
+    <style>
+      /*
+      los colores son: 
+      #232323 ->negro
+      #9c1420 -> rojo
+      */
+      body{
+        background-image: url('img/lobby-vista.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 0 !important;
+      }
+
+      input[type=submit]{
+        background-color: #9c1420;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        padding: 10px 30px;
+      }
+
+      input[type=submit]:hover{
+        background-color: white;
+        color: #9c1420;
+      }
+
+      a#link-theme{
+        color: white;
+        text-decoration: none;
+      }
+
+      a#link-theme:hover{
+        color: #9c1420;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <main class="vh-100" style="background-color: rgba(0, 0, 0, 0.479);">
+      <table class="w-100 h-100"><tbody><tr><td class="align-middle">
+      <div class="container">
+        <div class="row text-center d-block" style="padding:10px;">
+          <div class="col-sm-10 col-ms-9 col-md-8 col-lg-6 col-xl-4 card text-center d-inline-block" style="border-radius:20px; color:white; background-color: #232323;">
+            <div class="card-body">
+              <div class="w-100 d-inline-block">
+                <a class="navbar-brand p-0" href="https://www.institutoeduardocorreia.com.br/" target="_blank"><img id="logo" src="img/logo_iedc.png" width="150px"/></a>
+              </div>
+              <hr class="featurette-divider">
+              <h2 class="featurette-heading fw-bold" style="color: white">I COLÓQUIO NACIONAL DO <span style="color: #9c1420;"> IEDC</span></h2>
+              <h5 class="featurette-heading fw-bold" style="color: white">16 e 17 de Abril</h5>
+                <p class="mt-4 card-text mb-3">Insira seu email para acessar o evento</p>
+              <form action="/login" method="POST">
+                <div class="mb-3 text-start">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" required placeholder="name@example.com">
+                </div>
+                <div class="mb-3 text-center">
+                  <input type="checkbox" id="aceptar_terminos" required>
+                  <a id="link-theme" href="/auditorio" style="text-decoration: none;">Aceite os termos e condições do evento TROX 360</a>
+                </div>
+                <input id="ingresar" class="mt-2 mb-2" href="#" type="submit" value="Acessar"/><br>
+                <%if(denied){%>
+                  <span style="color: red;">O e-mail inserido não está cadastrado para acessar o evento</span>  
+                  <%}%>
+              </form>
+            </div>
+            <hr class="featurette-divider">
+            <div class="w-100 d-inline-block mb-3">
+              <span id="countdown-title">O evento começará em:<br></span>
+              <span id="countdown" class="fw-bold"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </td></tr></tbody></table>
+    </main>
+
+    <script>
+
+      var end = new Date('2021/04/14 00:00');
+
+      var _second = 1000;
+      var _minute = _second * 60;
+      var _hour = _minute * 60;
+      var _day = _hour * 24;
+      var timer;
+
+      function showRemaining() {
+          var now = new Date();
+          var distance = end - now;
+          console.log(end);
+          console.log(now);
+          console.log(distance);
+          if (distance < 0) {
+
+              clearInterval(timer);
+              document.getElementById('countdown').innerHTML = '<strong>O EVENTO JÁ COMEÇOU!</strong>';
+              $('#countdown-title').css("display","none");
+              $("#ingresar").attr("disabled",false);
+              return;
+          }
+          else{
+            $("#ingresar").attr("disabled",true);
+            var days = Math.floor(distance / _day);
+            var hours = Math.floor((distance % _day) / _hour);
+            var minutes = Math.floor((distance % _hour) / _minute);
+            var seconds = Math.floor((distance % _minute) / _second);
+
+            document.getElementById('countdown').innerHTML = days + ' dias, ';
+            document.getElementById('countdown').innerHTML += hours + ' horas, ';
+            document.getElementById('countdown').innerHTML += minutes + ' minutos y ';
+            document.getElementById('countdown').innerHTML += seconds + ' segundos';
+          }
+      }
+
+      timer = setInterval(showRemaining, 1000);
+    </script>
+  </body>
+</html>
