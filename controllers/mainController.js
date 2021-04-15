@@ -5,6 +5,7 @@ controller.login = (req, res) => {
     console.log(email);
     req.getConnection((err, conn) => {
       conn.query('SELECT * FROM table_user WHERE email = ?', [email], (err, rows) => {
+        console.log(rows);
         if(rows!=undefined){
             if (rows.length>0){
                 req.session.user = rows[0];
